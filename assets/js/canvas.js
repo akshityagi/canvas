@@ -33,11 +33,11 @@ var mouse = {
 var maxRadius = 40;
 
 var colorArr = [
-    '#001021',
-    '#3626A7',
-    '#034748',
-    '#3F88C5',
-    '#1481BA',
+    '#A4243B',
+    '#D8C99B',
+    '#D8973C',
+    '#BD632F',
+    '#273E47',
 ];
 
 window.addEventListener('mousemove', function(event) {
@@ -104,6 +104,8 @@ for(var i=0; i<1000 ; i++) {
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    c.fillStyle = "#000";
+    c.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
     for (var i = 0; i < circleArr.length; i++) {
         circleArr[i].update();
