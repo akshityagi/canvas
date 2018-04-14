@@ -1,4 +1,28 @@
 body,html {
 	padding: 0;
 	margin: 0;
+	color: #ffffff;
+	font-family: 'Lato';
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+::selection {
+	color: black;
+	background: #FF4488;
+}
+
+h1 {
+	font-size: 5rem;
+	letter-spacing: 5px;
+	margin: 0;
+}
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
