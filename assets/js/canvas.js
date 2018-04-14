@@ -92,7 +92,7 @@ function circle(x, y, dx, dy, radius) {
 }
 
 var circleArr = [];
-for(var i=0; i<1000 ; i++) {
+for(var i=0; i<200 ; i++) {
     var x = (Math.random() * (window.innerWidth - (radius *2))) + radius;
     var y = (Math.random() * (window.innerHeight - (radius * 2))) + radius;
     var dx = (Math.random() - 0.5) * 10;
