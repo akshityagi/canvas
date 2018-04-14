@@ -30,7 +30,7 @@ var mouse = {
     x : undefined,
     y : undefined
 }
-var maxRadius = 40;
+var maxRadius = 100;
 
 var colorArr = [
     '#A4243B',
@@ -49,6 +49,17 @@ window.addEventListener('resize', function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+function cursor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.radius = 10;
+
+    c.beginPath();
+    c.arc(this.x , this.y, this.radius, 0, Math.PI * 2, false);
+    c.fillStyle = '#f0f';
+    c.fill();
+} 
 
 function circle(x, y, dx, dy, radius) {
     this.x = x;
@@ -95,8 +106,8 @@ var circleArr = [];
 for(var i=0; i<200 ; i++) {
     var x = (Math.random() * (window.innerWidth - (radius *2))) + radius;
     var y = (Math.random() * (window.innerHeight - (radius * 2))) + radius;
-    var dx = (Math.random() - 0.5) * 10;
-    var dy = (Math.random() - 0.5) * 10;
+    var dx = (Math.random() - 0.5) * 3;
+    var dy = (Math.random() - 0.5) * 3;
     var radius = Math.random() * 5 + 1;
     circleArr.push(new circle(x, y, dx, dy, radius));
 }
@@ -110,6 +121,9 @@ function animate() {
     for (var i = 0; i < circleArr.length; i++) {
         circleArr[i].update();
     }
+
+    cursor(mouse.x, mouse.y);
+
 }
 
 animate();
