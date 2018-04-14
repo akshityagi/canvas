@@ -53,11 +53,11 @@ window.addEventListener('resize', function () {
 function cursor(x, y) {
     this.x = x;
     this.y = y;
-    this.radius = 10;
+    this.radius = 7;
 
     c.beginPath();
     c.arc(this.x , this.y, this.radius, 0, Math.PI * 2, false);
-    c.fillStyle = '#f0f';
+    c.fillStyle = '#FF4488';
     c.fill();
 } 
 
